@@ -5,7 +5,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the static HTML file to the Nginx web directory
-COPY index.html /usr/share/nginx/html/
+COPY testapp /usr/share/nginx/html/
 RUN rm -rf nginx.conf
 COPY app.conf /etc/nginx/conf.d
 COPY nginx.conf /etc/nginx
